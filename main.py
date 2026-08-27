@@ -10,7 +10,7 @@ def extract_job_description(job_description:str):
 
     chain=prompt | model | parser
 
-    result= chain.invoke({"job_description":job_description,"chat_history":[]})
+    result= chain.invoke({"job_description":job_description})
     return result
 
 def main():

@@ -1,4 +1,4 @@
-from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate
 def create_prompt(format_instructions):
     system_prompt="""
     You are an expert Job Description Information Extractor.
@@ -29,7 +29,7 @@ def create_prompt(format_instructions):
     {format_instructions}
     """
 
-    prompt=ChatPromptTemplate.from_messages([("system",system_prompt),MessagesPlaceholder(variable_name="chat_history"),
+    prompt=ChatPromptTemplate.from_messages([("system",system_prompt),
                             ("human","Extract the required information from this job description:\n\n{job_description}")]).partial(format_instructions = format_instructions)
 
     return prompt
