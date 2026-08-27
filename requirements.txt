@@ -3,3 +3,4 @@ langchain-core==1.4.8
 pydantic==2.13.4
 python-dotenv==1.2.3
 streamlit==1.62.0
+langchain-groq
